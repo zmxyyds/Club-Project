@@ -1,0 +1,72 @@
+[gd_scene load_steps=11 format=3 uid="uid://bds1f3kp15tpr"]
+
+[ext_resource type="Script" uid="uid://cswgdjevsa8yf" path="res://玩家/player.gd" id="1_70ji4"]
+[ext_resource type="PackedScene" uid="uid://bexhb4inwdis3" path="res://玩家/remy.tscn" id="2_n6e2d"]
+[ext_resource type="Script" uid="uid://v8iqhs35qmtk" path="res://玩家/组件/状态机/状态机器/状态机器.gd" id="3_x8mbe"]
+[ext_resource type="Script" uid="uid://pmq8ybu7gr5s" path="res://玩家/组件/状态机/状态/状态.gd" id="4_4a03n"]
+[ext_resource type="Script" uid="uid://8rpnmjd0gfsn" path="res://玩家/待机.gd" id="4_8o6wb"]
+[ext_resource type="Script" uid="uid://c5levj5r3fgkn" path="res://玩家/行走.gd" id="5_b2ecg"]
+[ext_resource type="Script" uid="uid://d0v753x8s1ijc" path="res://玩家/跳跃.gd" id="6_xk5am"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_4a03n"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_x8mbe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8o6wb"]
+radius = 7.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_70ji4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1, -15)
+scale = Vector2(0.14, 0.14)
+texture = SubResource("ViewportTexture_4a03n")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+own_world_3d = true
+
+[node name="Remy" parent="SubViewport" instance=ExtResource("2_n6e2d")]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9634111, 6.01967)
+
+[node name="状态机" type="Node" parent="." node_paths=PackedStringArray("初状态")]
+script = ExtResource("3_x8mbe")
+"初状态" = NodePath("待机")
+metadata/_custom_type_script = "uid://v8iqhs35qmtk"
+
+[node name="待机" type="Node" parent="状态机"]
+script = ExtResource("4_8o6wb")
+metadata/_custom_type_script = "uid://pmq8ybu7gr5s"
+
+[node name="行走" type="Node" parent="状态机"]
+script = ExtResource("5_b2ecg")
+metadata/_custom_type_script = "uid://pmq8ybu7gr5s"
+
+[node name="跳跃" type="Node" parent="状态机"]
+script = ExtResource("6_xk5am")
+metadata/_custom_type_script = "uid://pmq8ybu7gr5s"
+
+[node name="状态4" type="Node" parent="状态机"]
+script = ExtResource("4_4a03n")
+metadata/_custom_type_script = "uid://pmq8ybu7gr5s"
+
+[node name="状态5" type="Node" parent="状态机"]
+script = ExtResource("4_4a03n")
+metadata/_custom_type_script = "uid://pmq8ybu7gr5s"
+
+[node name="状态6" type="Node" parent="状态机"]
+script = ExtResource("4_4a03n")
+metadata/_custom_type_script = "uid://pmq8ybu7gr5s"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
+shape = SubResource("CircleShape2D_x8mbe")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -7)
+shape = SubResource("CircleShape2D_8o6wb")
