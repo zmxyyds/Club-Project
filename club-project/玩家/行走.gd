@@ -27,6 +27,9 @@ func update(_delta):
 	if Input.is_action_just_pressed("move 上移") :
 		update_state.emit("跳跃")
 	
+	if Input.is_action_just_pressed("翻滚"):
+		update_state.emit("翻滚")
+	
 
 func physics_update(delta):
 	var movement_vector =  player.get_movement_vector( ) 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://bds1f3kp15tpr"]
+[gd_scene load_steps=12 format=3 uid="uid://bds1f3kp15tpr"]
 
 [ext_resource type="Script" uid="uid://cswgdjevsa8yf" path="res://玩家/player.gd" id="1_70ji4"]
 [ext_resource type="PackedScene" uid="uid://bexhb4inwdis3" path="res://玩家/remy.tscn" id="2_n6e2d"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://8rpnmjd0gfsn" path="res://玩家/待机.gd" id="4_8o6wb"]
 [ext_resource type="Script" uid="uid://c5levj5r3fgkn" path="res://玩家/行走.gd" id="5_b2ecg"]
 [ext_resource type="Script" uid="uid://d0v753x8s1ijc" path="res://玩家/跳跃.gd" id="6_xk5am"]
+[ext_resource type="Script" uid="uid://b2n7agpg04nk" path="res://玩家/翻滚.gd" id="7_b2ecg"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_4a03n"]
 viewport_path = NodePath("SubViewport")
@@ -49,8 +50,8 @@ metadata/_custom_type_script = "uid://pmq8ybu7gr5s"
 script = ExtResource("6_xk5am")
 metadata/_custom_type_script = "uid://pmq8ybu7gr5s"
 
-[node name="状态4" type="Node" parent="状态机"]
-script = ExtResource("4_4a03n")
+[node name="翻滚" type="Node" parent="状态机"]
+script = ExtResource("7_b2ecg")
 metadata/_custom_type_script = "uid://pmq8ybu7gr5s"
 
 [node name="状态5" type="Node" parent="状态机"]
