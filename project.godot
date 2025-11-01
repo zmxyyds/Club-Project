@@ -10,13 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Club-Project"
-config/features=PackedStringArray("4.5", "Mobile")
+config/name="自己测试的"
+run/main_scene="res://sence/111.tscn"
+config/features=PackedStringArray("4.5", "C#", "Mobile")
 config/icon="res://icon.svg"
 
 [dotnet]
 
-project/assembly_name="Club-Project"
+project/assembly_name="自己测试的"
 
 [rendering]
 

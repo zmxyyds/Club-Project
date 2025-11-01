@@ -1,0 +1,11 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1762008707
+icon.svg::CompressedTexture2D::5709149810975504010::1762008116::1762008634::1::::<><><>0<>0<>31f1a42f83f7c0ff313b6324bde4b0a4<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+README.md::TextFile::-1::1762008116::0::1::::<><><>0<>0<><>::
+::res://Enemy/::1762008518
+::res://Enemy/Scripts/::1762008518
+AllEnum.cs::CSharpScript::5483989621842195971::1761835378::0::1::::<><><>0<>0<><>::
+Health.cs::CSharpScript::5294918274159534327::1761862348::0::1::::<>Node<><>0<>0<><>::
+test.gd::GDScript::6562517886432080229::1761862685::0::1::::<>Node<><>0<>0<><>::
+::res://sence/::1762008518
+111.tscn::PackedScene::1564546260749719915::1761948596::0::1::::<><><>0<>0<><>::uid://cho5sbd8o4e68::::res://Enemy/Scripts/Health.cs<>uid://c0q6yfxbf7gev::::res://Enemy/Scripts/test.gd
