@@ -94,11 +94,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\godot\\自己测试的\\自己测试的.csproj",
+      "projectUniqueName": "D:\\godot\\Club-project\\自己测试的.csproj",
       "projectName": "自己测试的",
-      "projectPath": "D:\\godot\\自己测试的\\自己测试的.csproj",
+      "projectPath": "D:\\godot\\Club-project\\自己测试的.csproj",
       "packagesPath": "C:\\Users\\asdxz\\.nuget\\packages\\",
-      "outputPath": "D:\\godot\\自己测试的\\.godot\\mono\\temp\\obj\\",
+      "outputPath": "D:\\godot\\Club-project\\.godot\\mono\\temp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

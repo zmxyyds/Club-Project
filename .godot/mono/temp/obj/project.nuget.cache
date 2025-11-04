@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aPa1IqCRM4w=",
+  "dgSpecHash": "g8UB+QBV8R0=",
   "success": true,
-  "projectFilePath": "D:\\godot\\自己测试的\\自己测试的.csproj",
+  "projectFilePath": "D:\\godot\\Club-project\\自己测试的.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\asdxz\\.nuget\\packages\\godot.sourcegenerators\\4.5.1\\godot.sourcegenerators.4.5.1.nupkg.sha512",
     "C:\\Users\\asdxz\\.nuget\\packages\\godotsharp\\4.5.1\\godotsharp.4.5.1.nupkg.sha512",
