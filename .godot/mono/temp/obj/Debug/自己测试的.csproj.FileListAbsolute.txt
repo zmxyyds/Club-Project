@@ -33,3 +33,5 @@ D:\godot\Club-project\.godot\mono\temp\obj\Debug\refint\自己测试的.dll
 D:\godot\Club-project\.godot\mono\temp\obj\Debug\自己测试的.pdb
 D:\godot\Club-project\.godot\mono\temp\obj\Debug\自己测试的.genruntimeconfig.cache
 D:\godot\Club-project\.godot\mono\temp\obj\Debug\ref\自己测试的.dll
+D:\godot\Club-project\.godot\mono\temp\bin\Debug\自己测试的.xml
+D:\godot\Club-project\.godot\mono\temp\obj\Debug\自己测试的.xml

@@ -8,7 +8,8 @@ func _ready() -> void:
 	assert(health_component != null, "Health组件不存在")
 		
 
-
+func set_max_health(value: float) -> void:
+	health_component.SetMaxHealth(value)
 
 func get_health_component() -> Node:
 	# 获取节点的唯一子节点

@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>自己测试的</name>
+    </assembly>
+    <members>
+        <member name="T:DamageType">
+            <summary>
+            伤害类型
+            </summary>
+        </member>
+        <member name="F:DamageType.Physical">
+            <summary>
+            物理伤害
+            </summary>
+        </member>
+        <member name="F:DamageType.Other">
+            <summary>
+            其他伤害
+            </summary>
+            <remarks>
+            一些无法解析的伤害，一般是错误拼写导致的<para/>
+            所以正常情况下故意对目标造成Other伤害是不允许的。<para/>
+            默认情况下，目标对Other伤害的防御力是100%
+            </remarks>
+        </member>
+        <member name="T:SetMaxHealthMode">
+            <summary>
+            最大生命值的设置模式,用于<see cref="M:Health.SetMaxHealth(System.Single,SetMaxHealthMode,SetCurrentHealthMode)"/>方法
+            </summary>
+        </member>
+        <member name="F:SetMaxHealthMode.Set">
+            <summary>
+            直接设置最大生命值
+            </summary>
+        </member>
+        <member name="F:SetMaxHealthMode.Add">
+            <summary>
+            增加（或减少）最大生命值
+            </summary>
+        </member>
+        <member name="F:SetMaxHealthMode.Proportion">
+            <summary>
+            按照缩放比例来设置最大生命值
+            </summary>
+        </member>
+        <member name="T:SetCurrentHealthMode">
+            <summary>
+            当前生命值的设置模式,用于<see cref="M:Health.SetMaxHealth(System.Single,SetMaxHealthMode,SetCurrentHealthMode)"/>方法
+            </summary>
+        </member>
+        <member name="F:SetCurrentHealthMode.Proportion">
+            <summary>
+            按照缩放比例来设置当前生命值
+            </summary>
+        </member>
+        <member name="F:SetCurrentHealthMode.NoAction">
+            <summary>
+            不进行任何操作，但会检查当前生命值是否超过最大生命值
+            </summary>
+        </member>
+        <member name="F:SetCurrentHealthMode.Sync">
+            <summary>
+            同步设置当前生命值，你加多少我也加多少
+            </summary>
+        </member>
+        <member name="P:Health.MaxHealth">
+            <summary>
+            最大的生命值
+            </summary>
+            <remarks>
+            在这里set maxHealth很不安全<para/>
+            你可以通过<see cref="!:SetMaxHealth(float, bool)"/>方法来修改maxHealth,
+            并选择是否要按照比例来修改currentHealth
+            </remarks>
+            <value><see cref="F:Health.maxHealth"/></value>
+        </member>
+        <member name="P:Health.CurrentHealth">
+            <summary>
+            当前的生命值
+            </summary>
+            <value><see cref="F:Health.currentHealth"/></value>
+        </member>
+        <member name="M:Health.Damage(System.Single,DamageType)">
+            <summary>
+            伤害
+            </summary>
+            <param name="amount">伤害量</param>
+            <param name="damageType">伤害类型</param>
+        </member>
+        <member name="T:Health.MethodName">
+            <summary>
+            Cached StringNames for the methods contained in this class, for fast lookup.
+            </summary>
+        </member>
+        <member name="F:Health.MethodName.SetMaxHealth">
+            <summary>
+            Cached name for the 'SetMaxHealth' method.
+            </summary>
+        </member>
+        <member name="F:Health.MethodName.Damage">
+            <summary>
+            Cached name for the 'Damage' method.
+            </summary>
+        </member>
+        <member name="F:Health.MethodName._Ready">
+            <summary>
+            Cached name for the '_Ready' method.
+            </summary>
+        </member>
+        <member name="M:Health.GetGodotMethodList">
+            <summary>
+            Get the method information for all the methods declared in this class.
+            This method is used by Godot to register the available methods in the editor.
+            Do not call this method.
+            </summary>
+        </member>
+        <member name="M:Health.InvokeGodotClassMethod(Godot.NativeInterop.godot_string_name@,Godot.NativeInterop.NativeVariantPtrArgs,Godot.NativeInterop.godot_variant@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Health.HasGodotClassMethod(Godot.NativeInterop.godot_string_name@)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Health.PropertyName">
+            <summary>
+            Cached StringNames for the properties and fields contained in this class, for fast lookup.
+            </summary>
+        </member>
+        <member name="F:Health.PropertyName.MaxHealth">
+            <summary>
+            Cached name for the 'MaxHealth' property.
+            </summary>
+        </member>
+        <member name="F:Health.PropertyName.CurrentHealth">
+            <summary>
+            Cached name for the 'CurrentHealth' property.
+            </summary>
+        </member>
+        <member name="F:Health.PropertyName.maxHealth">
+            <summary>
+            Cached name for the 'maxHealth' field.
+            </summary>
+        </member>
+        <member name="F:Health.PropertyName.currentHealth">
+            <summary>
+            Cached name for the 'currentHealth' field.
+            </summary>
+        </member>
+        <member name="M:Health.SetGodotClassPropertyValue(Godot.NativeInterop.godot_string_name@,Godot.NativeInterop.godot_variant@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Health.GetGodotClassPropertyValue(Godot.NativeInterop.godot_string_name@,Godot.NativeInterop.godot_variant@)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Health.GetGodotPropertyList">
+            <summary>
+            Get the property information for all the properties declared in this class.
+            This method is used by Godot to register the available properties in the editor.
+            Do not call this method.
+            </summary>
+        </member>
+        <member name="M:Health.GetGodotPropertyDefaultValues">
+            <summary>
+            Get the default values for all properties declared in this class.
+            This method is used by Godot to determine the value that will be
+            used by the inspector when resetting properties.
+            Do not call this method.
+            </summary>
+        </member>
+        <member name="M:Health.SaveGodotObjectData(Godot.Bridge.GodotSerializationInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Health.RestoreGodotObjectData(Godot.Bridge.GodotSerializationInfo)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Health.SignalName">
+            <summary>
+            Cached StringNames for the signals contained in this class, for fast lookup.
+            </summary>
+        </member>
+    </members>
+</doc>
