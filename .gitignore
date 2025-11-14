@@ -16,3 +16,8 @@ data_*/
 mono_crash.*.json
 club-project/ExeCode-Generation.py
 club-project/.vscode/settings.json
+
+# IDE/tooling ignores
+.trae/
+.vscode/
+.trae/rules/project_rules.md
