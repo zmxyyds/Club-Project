@@ -1,12 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2cr5uvbbwi3f"]
+[gd_scene load_steps=2 format=3 uid="uid://d2cr5uvbbwi3f"]
 
-[ext_resource type="Script" uid="uid://3moakwp27dfw" path="res://Enemy/Scripts/GD/health.gd" id="1_6phow"]
-[ext_resource type="Script" uid="uid://cho5sbd8o4e68" path="res://Enemy/Scripts/Cs/Health.cs" id="2_aeqwi"]
+[ext_resource type="Script" uid="uid://3moakwp27dfw" path="res://Scripts/GD/health.gd" id="1_6phow"]
 
-[node name="Root" type="Node"]
+[node name="root" type="Node2D"]
 
-[node name="Health" type="Node2D" parent="."]
+[node name="Health" type="Node" parent="."]
 script = ExtResource("1_6phow")
-
-[node name="Healthcs" type="Node" parent="Health"]
-script = ExtResource("2_aeqwi")

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("自己测试的")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b60b7b18ddad0c7ab4782c7b24ddc0c5d06a5347")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+029f63aabebcc235d49ca33bd58b92e14355cbff")]
 [assembly: System.Reflection.AssemblyProductAttribute("自己测试的")]
 [assembly: System.Reflection.AssemblyTitleAttribute("自己测试的")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

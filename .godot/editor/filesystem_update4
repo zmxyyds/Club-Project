@@ -1,3 +1,1 @@
-res://Enemy/Scripts/Cs/Health.cs
-res://Enemy/Scripts/GD/health.gd
-res://sence/root.tscn
+res://Scripts/GD/health.gd
