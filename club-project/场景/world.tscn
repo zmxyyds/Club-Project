@@ -1,7 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://cqf1hvaxyl6bo"]
+[gd_scene load_steps=8 format=4 uid="uid://cqf1hvaxyl6bo"]
 
 [ext_resource type="PackedScene" uid="uid://bds1f3kp15tpr" path="res://玩家/player.tscn" id="1_woglx"]
 [ext_resource type="Texture2D" uid="uid://c22gt68dtb31f" path="res://素材/场景/colormap.png" id="2_ehur6"]
+[ext_resource type="Script" uid="uid://co2k6141ukdu3" path="res://Scripts/Health.gd" id="2_t1wle"]
+[ext_resource type="Script" uid="uid://d3hm36dpxlxfr" path="res://Scripts/Buff.gd" id="3_nesln"]
 [ext_resource type="Script" uid="uid://dy5ir8owatdvy" path="res://场景/camera_2d.gd" id="3_t1wle"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ehur6"]
@@ -512,6 +514,12 @@ sources/0 = SubResource("TileSetAtlasSource_ehur6")
 
 [node name="Player" parent="." groups=["player"] instance=ExtResource("1_woglx")]
 position = Vector2(323, 259)
+
+[node name="Health" type="Node" parent="Player"]
+script = ExtResource("2_t1wle")
+
+[node name="Buff" type="Node" parent="Player"]
+script = ExtResource("3_nesln")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAANABEAAAAAABAAAAAOABEAAAAAABAAAAAPABEAAAAAABAAAAAQABEAAAAAABAAAAARABEAAAAAABAAAAASABEAAAAAABAAAAATABEAAAAAABAAAAAUABEAAAAAABAAAAAVABEAAAAAABAAAAAWABEAAAAAABAAAAAXABEAAAAAABAAAAAYABEAAAAAABAAAAAZABEAAAAAABAAAAAaABEAAAAAABAAAAAbABEAAAAAABAAAAAcABEAAAAAABAAAAAdABEAAAAAABAAAAAeABEAAAAAABAAAAAcAA4AAAAAABAAAAAdAA4AAAAAABAAAAAeAA4AAAAAABAAAAAfAA4AAAAAABAAAAAgAA4AAAAAABAAAAAhAA4AAAAAABAAAAAiAA4AAAAAABAAAAAjAA4AAAAAABAAAAAnAAsAAAAAABAAAAAnAAwAAAAAABAAAAAnAA0AAAAAABAAAAAnAA4AAAAAABAAAAAsABEAAAAAABAAAAAtABEAAAAAABAAAAAuABEAAAAAABAAAAAvABEAAAAAABAAAAAwABEAAAAAABAAAAAxABEAAAAAABAAAAArABEAAAAAABAAAAAqABEAAAAAABAAAAA=")
