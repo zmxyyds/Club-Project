@@ -22,25 +22,43 @@ var actual_max_health: float = max_health
 ## 
 @export var current_health: float = 0.0
 
+## 最大生命值设置模式 [br]
+enum SetMaxHealthMode {
+	##直接设置
+	SET = 0,
+	##按比例设置
+	PROPORTION = 1,
+	##增加
+	ADD = 2,
+}
+
+##伤害类型
+enum DamageType {
+	##物理伤害
+	PHYSICAL = 0,
+	##其它伤害
+	OTHER = 1,
+}
+
 ## @experimental:目前而言，这个函数对当前生命值的操作还有待改进
 ## 设置基础最大生命值 [br]
-## 参数[value] ：设置的值[br] 
-## 参数[set_max_health_mode] ：设置的模式[br] 
+## [param value] ：设置的值[br] 
+## [param set_max_health_mode] ：设置的模式，使用枚举量[SetMaxHealthMode][br] 
 ## 模式：[br]
-## 		"set" ：直接设置基础最大生命值(=value) [br] 
-## 		"proportion" ：按比例设置基础最大生命值(*value) [br] 
-##     "add" ：增加基础最大生命值(+value) [br] 
+## 		[constant SetMaxHealthMode.SET] ：直接设置基础最大生命值(=value) [br] 
+## 		[constant SetMaxHealthMode.PROPORTION] ：按比例设置基础最大生命值(*value) [br] 
+##     [constant SetMaxHealthMode.ADD] ：增加基础最大生命值(+value) [br] 
 ## 如果模式错误，函数会断言失败，等待开发人员修复代码。
-func set_max_health(value: float, set_max_health_mode: String = "set") -> void:
+func set_max_health(value: float, set_max_health_mode: SetMaxHealthMode = SetMaxHealthMode.SET) -> void:
 
 	if current_health > value:
 		current_health = value
 
-	if set_max_health_mode == "set":
+	if set_max_health_mode == SetMaxHealthMode.SET:
 		max_health = value
-	elif set_max_health_mode == "proportion":
+	elif set_max_health_mode == SetMaxHealthMode.PROPORTION:
 		max_health *= value
-	elif set_max_health_mode == "add":
+	elif set_max_health_mode == SetMaxHealthMode.ADD:
 		max_health += value
 	else:
 		assert(false, "set_max_health_mode 模式错误")
@@ -62,6 +80,13 @@ func treat(value: float)->void:
 	return
 
 
+##用于直接造成伤害[br]
+## [param baseDamage] ：基础伤害值[br] 
+## [param damageType] ：伤害类型[br] 
+## [param source] ：伤害来源[br] 
+##没有返回值
+func damage(baseDamage: float, damageType: DamageType = DamageType.OTHER, source: Node = null) -> void:
+	pass
 
 
 
