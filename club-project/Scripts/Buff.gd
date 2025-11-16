@@ -18,4 +18,4 @@ func UpdateMaxHealth() -> void:
 	var maxhealth = health.max_health
 	for function in maxHealthModification:
 		maxhealth = function.call(maxhealth)
-	
+	health.SetActualMaxHealth(maxhealth)

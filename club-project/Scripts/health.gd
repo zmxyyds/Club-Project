@@ -64,6 +64,13 @@ func set_max_health(value: float, set_max_health_mode: SetMaxHealthMode = SetMax
 		assert(false, "set_max_health_mode 模式错误")
 	return
 
+## 设置实际最大生命值 [br]
+## 当前生命值会等比例增减[br]
+## [param value] ：设置的值[br] 
+func SetActualMaxHealth(value: float) -> void:
+	current_health = (current_health / actual_max_health) * value
+	actual_max_health = value
+
 ## 获取当前生命值百分比 [br]
 ## 返回值：当前生命值占基础最大生命值的百分比 [br]
 func get_health_percentage() -> float:
